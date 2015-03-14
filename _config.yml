@@ -2,11 +2,12 @@
 title: Scott's Blog
 email: spharris@gmail.com
 description: > 
-  Wherein I try to become a better programmer.
+  Where I try to become a better programmer by writing about it rather than
+  actually doing it.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://spharris.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  spharris
 
 # Build settings
 markdown: kramdown
+	kramdown: GFM
