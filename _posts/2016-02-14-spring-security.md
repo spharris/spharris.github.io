@@ -40,3 +40,6 @@ Now that the `SecurityContext` is populated, the final step in the Spring Securi
 What if you have resources that you don't want to require people to log in for? Access for anonymous users can be granted through a two-step process. First, you include a special filter, called the [AnonymousAuthenticationFilter](http://docs.spring.io/autorepo/docs/spring-security/4.0.3.RELEASE/apidocs/org/springframework/security/web/authentication/AnonymousAuthenticationFilter.html), in your filter chain. This filter, which you put after your standard authentication handling filter (the first step described [above](#create-an-authenticationtoken)), populates the `SecurityContext` with a special `AuthenticationToken`, an `AnonymousAuthenticationToken` if no previous step in the filter chain has populated it. The anonymous token has two properties: a `principal` of `anonymousUser` and a single role of `ROLE_ANONYMOUS`.
 
 During the authorization phase of the request, when it is run through the `SecurityInterceptor` filter, `ROLE_ANONYMOUS` can be checked against the required roles for a particular resource.
+
+## Summary
+Those are the very basics of request authentication using Spring Security: create a token, authorize the token, populate the `SecurityContext`, and authorize the request.
