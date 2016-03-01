@@ -2,7 +2,7 @@
 layout: post
 title: Your API Needs Good Error Messages
 ---
-Not so long ago, any kind of invalid field input -- a `String` instead of an `Integer`, for example -- sent into the [Genability API](http://developer.genability.com/documentation/) resulted in the following error message:
+Not so long ago, any kind of invalid field input -- a `String` instead of an `Integer`, for example -- sent into the [Genability API](http://developer.genability.com/documentation/) would result in the following error message:
 
 {% highlight html %}
 <html>
@@ -45,11 +45,11 @@ In a lot of ways, error messages are just another form of documentation: they te
 ### Time = Money
 It's important to understand that the key non-functional measurement of a successful API is the speed at which a developer can go from zero to a working implementation. This is true in a couple of ways.
 
-First and foremost, this means that your customers (and, subsequently, you) get to revenue more quickly. If your error messages help point users in the right direction instead of giving them bad or no information, they'll be able to correct their mistakes and get their software working more quickly.
+First and foremost, this means that your customers (and, subsequently, you) get to revenue more quickly. If your error messages help point users in the right direction instead of giving them bad or no information, they'll be able to correct their mistakes and get their software working in a more timely fashion.
 
 Secondly, faster integration times mean fewer chances for people to say, "This is too hard (or expensive). Let's just stick with what we were doing before." This is especially important in cases where you are taking customers from your competitors. As we all know, people have very strong status quo biases; they will naturally look for any reason to avoid changing something that's already "good enough." Long, difficult integration periods caused (in part) by unhelpful or confusing are exactly the kinds of things that lead to lost customers.
 
-Better error messages also mean less spent supporting customers and more time improving your API. When we changed our invalid input message to be more informative, we got to reallocate the time spent on investigating and answering simple support tickets to getting actual work done. It was an improvement all aorund.
+Better error messages also mean less spent supporting customers and more time improving your API. When we changed our invalid input message to be more informative, we got to reallocate the time spent on investigating and answering simple support tickets to getting actual work done. It was an improvement all around.
 
 ## Creating Better Error Messages
 Now we know that error messages are an important part of any good API design. So, how do you make yours better? Two things are key to any kind of error message:
@@ -101,7 +101,7 @@ One option would be to just say what went wrong:
 }
 {% endhighlight %}
 
-That's fine, and it's certainly better than our original Tomcat error page. With this error message, however, your forcing the user to go back and examine their request to see what went wrong. If their code isn't well organized, or they just swapped their positions of `from` and `to` vertically when building their request, this could take a while for them to diagnose. We can do better.
+That's fine, and it's certainly better than our original Tomcat error page. With this error message, however, you're forcing the user to go back and examine their request to see what went wrong. If their code isn't well organized, or they just swapped their positions of `from` and `to` vertically when building their request, this could take a while for them to diagnose. We can do better.
 
 Instead of just telling them what went wrong, show them:
 
@@ -124,3 +124,4 @@ Instead of just telling them what went wrong, show them:
 Now we're talking. The user is able to see not only what went wrong (an invalid date range, with the invalid dates included), but also exactly what they can do to fix it. They can easily see that they've swapped their variables around and that they can just switch them back to have a valid request.
 
 ## Conclusion
+Error messages are a critical component of any API design. Not only do they make your users' lives easier, but they can lead directly to quicker revenue generation and more of your time spent working on the things you actually care about. Remember that next time you're tempted to just write, "Something went wrong, sorry!" in response to an error.
